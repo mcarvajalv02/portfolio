@@ -52,19 +52,21 @@ header h1{
     margin-right: 5%;
 }
 
-.projects{
+.projects {
     margin-top: 20%;
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos salten a una nueva fila */
+    justify-content: space-between; /* Distribuye los elementos uniformemente */
     margin-left: 5%;
-    align-items: flex-start;
-    gap: 10px;
     margin-right: 5%;
+    gap: 20px; /* Espacio entre proyectos */
 }
 
-.project{
+.project {
     text-align: center;
     border: 1px solid white;
-    width: 30%;
+    width: calc(33.33% - 20px); /* Cada proyecto ocupa un tercio del contenedor, menos el espacio de 'gap' */
+    box-sizing: border-box; /* Asegura que el padding y border no afecten el ancho */
 }
 
 .project img{
@@ -100,9 +102,10 @@ section p{
     border-radius: 30px;
 }
 
-
-
-
+.navLink:hover{
+    background-color: rgb(236, 235, 235);
+    color: black;
+}
 
 .project h2{
     color: var(--text);
